@@ -8,3 +8,7 @@ class User {
         $this->email = filter_var($email, FILTER_SANITIZE_EMAIL);
         $this->password = password_hash($password, PASSWORD_BCRYPT);
     }
+
+    public function getName() {
+        return $this->name;
+    }
