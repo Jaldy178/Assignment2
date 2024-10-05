@@ -1,9 +1,9 @@
 <?php
 class database {
     private $host = 'localhost';
-    private $db = '';
+    private $db = '';//dbname
     private $user = 'root';
-    private $pass = '';
+    private $pass = '';//MySQL password
     private $charset = 'utf8mb4';
     private $pdo;
 
