@@ -22,7 +22,9 @@ class User {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    if ()
+    if (!empty($_POST['name']) && !empty($_POST['email']) $$ !empty($_POST['password'])){
+        $
+    }
 }
 
 
