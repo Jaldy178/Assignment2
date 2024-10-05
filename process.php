@@ -36,7 +36,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $stmt = $pdo->prepare('INSERT INTO users (name, email, password) VALUES (?, ?, ?)');
         $stmt->execute([$user->getName(), $user->getEmail(), $user->getPassword()]);
 
-        
+        //2FA-generate and send OTP
+        $otp = rand(100000, 999999); //generate otp
+        $_SESSION['otp'] = $otp; //store OTP in session
+        mail($user->getEmail(), "Your OTP code, Your OTP cose is $otp.");//semd OTP via email
+
+        echo "User registered successfully!! Check your email for the OTP.";
+    }else {
+        echo"All fields are  required.";
     }
 
 }
