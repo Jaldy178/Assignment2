@@ -1,3 +1,4 @@
+<?php
 class User {
     private $name;
     private $email;
@@ -28,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     }else{
         echo "ALL fields are required."
     }
-    
-}
 
+}
+?>
 
