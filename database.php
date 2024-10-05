@@ -13,6 +13,8 @@ class database {
             $this->pdo = new PDO($dsn, $this->user, $this->pass);
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $this->pdo;
+        }catch(PDOException $e){
+            echo'Connection Failed: ' . $e->getMessage();
         }
     }
 
