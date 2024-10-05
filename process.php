@@ -33,6 +33,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $db= new Database();
         $pdo = $db->connect();
 
+        $stmt = $pdo->prepare('INSERT INTO users (name, email, password) VALUES (?, ?, ?)');
+        $stmt->execute([$user->getName(), $user->getEmail(), $user->getPassword()]);
+
         
     }
 
