@@ -1,4 +1,6 @@
 <?php
+session_start();
+require_once 'database.php';
 class User {
     private $name;
     private $email;
