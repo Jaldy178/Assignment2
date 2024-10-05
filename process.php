@@ -26,8 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $user = new User($_POST['name'], $_POST['email'], $_POST['password']);
         //Proceed to db storage
     }else{
-        
+        echo "ALL fields are required."
     }
+    
 }
 
 
