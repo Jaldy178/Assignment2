@@ -23,7 +23,8 @@ class User {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     if (!empty($_POST['name']) && !empty($_POST['email']) $$ !empty($_POST['password'])){
-        $
+        $user = new User($_POST['name'], $_POST['email'], $_POST['password']);
+        
     }
 }
 
