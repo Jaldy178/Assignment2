@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once 'database.php';
+
 class User {
     private $name;
     private $email;
@@ -27,9 +28,12 @@ class User {
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     if (!empty($_POST['name']) && !empty($_POST['email']) $$ !empty($_POST['password'])){
         $user = new User($_POST['name'], $_POST['email'], $_POST['password']);
-        //Proceed to db storage
-    }else{
-        echo "ALL fields are required."
+
+        //store data in db
+        $db= new Database();
+        $pdo = $db->connect();
+
+        
     }
 
 }
